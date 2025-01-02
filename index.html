@@ -11,6 +11,32 @@
             font-family: Roboto;
             font-size:20px;
         }
+
+        body {
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
         /* Container to maintain aspect ratio */
         .video-container {
             position: relative;
