@@ -12,24 +12,27 @@
             font-size:20px;
         }
 
-        /* Ensure html and body fill the whole viewport */
+        /* Ensuring the html and body fill the entire page */
         html, body {
-            height: 100%; /* Ensures full page height */
+            height: 100%; /* Ensures body takes up full height */
             margin: 0; /* Removes default margin */
         }
 
         body {
-            /* Set a linear gradient background */
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            /* Gradient background */
+            background: linear-gradient(45deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
+            background-size: 400% 400%; /* Stretch the background */
+            animation: gradientAnimation 15s ease infinite; /* Animation of the gradient */
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
             font-size: 2rem;
             text-align: center;
-            min-height: 100%; /* Ensures full page height */
+            min-height: 100%; /* Ensures body takes full height */
         }
 
+        /* Defining the gradient animation */
         @keyframes gradientAnimation {
             0% {
                 background-position: 0% 50%;
@@ -41,6 +44,7 @@
                 background-position: 0% 50%;
             }
         }
+        
         /* Container to maintain aspect ratio */
         .video-container {
             position: relative;
